@@ -1,0 +1,205 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif; /* Fuente Times New Roman */
+    background: linear-gradient(to bottom, #000000, #333333); /* Gradiente de negro a gris */
+    color: #fff; /* Texto en blanco para contrastar con el fondo oscuro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.logo {
+    margin-bottom: 20px; /* Espacio entre el logo y el recuadro */
+}
+
+.container {
+    text-align: center;
+    background-color: #444; /* Gris oscuro para el recuadro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* Sombra blanca para resaltar */
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 26px; /* 2px más grande que el original (24px) */
+    margin-bottom: 20px;
+    color: #fff; /* Texto en blanco */
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black; /* Borde negro alrededor del texto */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los botones */
+}
+
+.Btn {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+  background-size: 250%;
+  background-position: left;
+  color: black; /* Color negro para el texto */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+  font-family: 'Times New Roman', serif; /* Fuente Times New Roman */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 18px; /* 2px más grande que el original (16px) */
+  text-shadow: 
+    -1px -1px 0 white,  
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white; /* Borde blanco alrededor del texto */
+}
+
+.Btn::before {
+  position: absolute;
+  content: attr(data-text); /* Usa el texto del botón */
+  color: black; /* Color negro para el texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+  font-family: 'Times New Roman', serif; /* Fuente Times New Roman */
+  font-size: 18px; /* 2px más grande que el original (16px) */
+  text-shadow: 
+    -1px -1px 0 white,  
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white; /* Borde blanco alrededor del texto */
+}
+
+.Btn:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:active {
+  transform: scale(0.95);
+}
+
+.Btn, a.Btn {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+    background-size: 250%;
+    background-position: left;
+    color: black; /* Color negro para el texto */
+    position: relative;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+    font-family: 'Times New Roman', serif; /* Fuente Times New Roman */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 18px; /* Tamaño de fuente */
+    text-shadow: 
+        -1px -1px 0 white,  
+         1px -1px 0 white,
+        -1px  1px 0 white,
+         1px  1px 0 white; /* Borde blanco alrededor del texto */
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.Btn::before, a.Btn::before {
+    position: absolute;
+    content: attr(data-text); /* Usa el texto del botón */
+    color: black; /* Color negro para el texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.842);
+    background-size: 200%;
+    font-family: 'Times New Roman', serif; /* Fuente Times New Roman */
+    font-size: 18px; /* Tamaño de fuente */
+    text-shadow: 
+        -1px -1px 0 white,  
+         1px -1px 0 white,
+        -1px  1px 0 white,
+         1px  1px 0 white; /* Borde blanco alrededor del texto */
+}
+
+.Btn:hover, a.Btn:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.Btn:hover::before, a.Btn:hover::before {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.Btn:active, a.Btn:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 22px; /* 2px más grande que el original (20px) */
+    }
+
+    .Btn {
+        font-size: 16px; /* 2px más grande que el original (14px) */
+    }
+}
+
+.eslogan {
+    font-family: 'Times New Roman', serif; /* Fuente Times New Roman */
+    font-size: 18px; /* Tamaño igual que los botones en desktop */
+    color: #ffd277; /* Color dorado como el botón */
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black; /* Borde negro alrededor del texto */
+    margin-top: 20px; /* Espacio entre el recuadro gris y el eslogan */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .eslogan {
+        font-size: 16px; /* Tamaño igual que los botones en móvil */
+    }
+}
